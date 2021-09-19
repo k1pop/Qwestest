@@ -1,0 +1,82 @@
+.container-form {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 7px;
+}
+
+.container-form .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px;
+}
+
+.container-form .title::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 3px;
+  background: $color-1;
+}
+
+.container-form form .user-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-detail .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-detail .input-box .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-detail .input-box input {
+  height: 40px;
+  width: 200%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  background-color: #4879d327;
+  font-size: 12px;
+  border-bottom-width: 2px;
+}
+
+form .status-details .status-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .status-details .status-all {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+.status-details .status-all .dot {
+  height: 18px;
+  width: 18;
+}
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 100%;
+  // margin: 100%;
+  outline: none;
+}

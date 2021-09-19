@@ -46,74 +46,76 @@ const Home = () => {
     });
   };
   return (
-    <div>
+    <>
       <Navigation />
-      <>
-        {/* post data rapide */}
-        <div>
-          <h1>Ajout rapide</h1>
+      <div>
+        <>
+          {/* post data rapide */}
+          <div>
+            <h1>Ajout rapide</h1>
 
-          <form onSubmit={(e) => handleSubmit(e)}>
-            <input
-              type="text"
-              onChange={(e) => setFirstName(e.target.value)}
-              value={firstname}
-              placeholder="Votre prénom..."
-            />
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <input
+                type="text"
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstname}
+                placeholder="Votre prénom..."
+              />
 
-            <input
-              type="text"
-              onChange={(e) => setLastName(e.target.value)}
-              value={lastname}
-              placeholder="Votre Nom..."
-            />
+              <input
+                type="text"
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastname}
+                placeholder="Votre Nom..."
+              />
 
-            <input
-              type="text"
-              onChange={(e) => setAdress(e.target.value)}
-              value={adress}
-              placeholder="Votre Adresse mail..."
-            />
-            <input
-              type="radio"
-              name="status"
-              onChange={(e) => setStatus(e.target.value)}
-              value={"Actif"}
-            />
-            <label>Actif</label>
+              <input
+                type="text"
+                onChange={(e) => setAdress(e.target.value)}
+                value={adress}
+                placeholder="Votre Adresse mail..."
+              />
+              <input
+                type="radio"
+                name="status"
+                onChange={(e) => setStatus(e.target.value)}
+                value={"Actif"}
+              />
+              <label>Actif</label>
 
-            <input
-              type="radio"
-              name="status"
-              onChange={(e) => setStatus(e.target.value)}
-              value={"Inactif"}
-            />
-            <label>Inactif</label>
-            <input type="submit" value="Valider l'inscription" />
-          </form>
-        </div>
-      </>
+              <input
+                type="radio"
+                name="status"
+                onChange={(e) => setStatus(e.target.value)}
+                value={"Inactif"}
+              />
+              <label>Inactif</label>
+              <input type="submit" value="Valider l'inscription" />
+            </form>
+          </div>
+        </>
 
-      {/* get data */}
-      <br />
-      <table className="table">
-        <thead className="thead">
-          <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>adresse mail</th>
-            <th>status</th>
-            <th>&#9998; Modifier</th>
-            <th>&#10006; Supprimer</th>
-          </tr>
-        </thead>
-        <tbody>
-          {newsData.map((users) => (
-            <Users key={users._id} users={users} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+        {/* get data */}
+        <br />
+        <table className="table">
+          <thead className="thead">
+            <tr>
+              <th>Prénom</th>
+              <th>Nom</th>
+              <th>adresse mail</th>
+              <th>status</th>
+              <th>&#9998; Modifier</th>
+              <th>&#10006; Supprimer</th>
+            </tr>
+          </thead>
+          <tbody>
+            {newsData.map((users) => (
+              <Users key={users._id} users={users} />
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 };
 

@@ -14,9 +14,13 @@ $color-4: #f6f1eb;
   font-family: $font-1;
 }
 body {
-  margin: 0.4rem auto;
-  max-width: 1296px;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  // margin: 0.4rem auto;
+  // max-width: 1296px;
   color: $color-3;
   background-color: $color-2;
-  padding: 14px;
+  padding: 10px;
 }

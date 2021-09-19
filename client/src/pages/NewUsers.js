@@ -23,60 +23,68 @@ const NewUsers = () => {
 
   return (
     <>
-      <div>
-        <Navigation />
-        <h1>Ajouter un utilisateur</h1>
-
+      <Navigation />
+      <div className="container-form">
+        <div className="title">Ajouter un utilisateur</div>
         <form onSubmit={handleRegister}>
-          <label>Prénom</label>
-          <br />
-          <input
-            type="text"
-            onChange={(e) => setFirstName(e.target.value)}
-            value={firstname}
-            placeholder="Votre prénom..."
-          />
-          <br />
-          <label>Nom</label>
-          <br />
-          <input
-            type="text"
-            onChange={(e) => setLastName(e.target.value)}
-            value={lastname}
-            placeholder="Votre Nom..."
-          />
-          <br />
-          <label>Adresse mail</label>
-          <br />
-          <input
-            type="text"
-            onChange={(e) => setAdress(e.target.value)}
-            value={adress}
-            placeholder="Votre Adresse mail..."
-          />
-          <br />
+          <div className="user-detail">
+            <div className="input-box">
+              <label className="details">Prénom</label>
+              <input
+                required
+                type="text"
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstname}
+                placeholder="Votre prénom..."
+              />
+            </div>
 
-          <label>Status</label>
-          <br />
-          <input
-            type="radio"
-            name="status"
-            onChange={(e) => setStatus(e.target.value)}
-            value={"Actif"}
-          />
-          <label>Actif</label>
-          <br />
+            <div className="input-box">
+              <label className="details">Nom</label>
+              <input
+                type="text"
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastname}
+                placeholder="Votre Nom..."
+              />
+            </div>
 
-          <input
-            type="radio"
-            name="status"
-            onChange={(e) => setStatus(e.target.value)}
-            value={"Inactif"}
-          />
-          <label>Inactif</label>
-          <br />
+            <div className="input-box">
+              <label className="details">Adresse mail</label>
+              <input
+                type="text"
+                onChange={(e) => setAdress(e.target.value)}
+                value={adress}
+                placeholder="Votre Adresse mail..."
+              />
+            </div>
+          </div>
 
-          <input type="submit" value="Valider l'inscription" />
+          <div className="status-details">
+            <label className="status-title">Status</label>
+            <div className="status-all">
+              <input
+                className="dot one"
+                type="radio"
+                name="status"
+                onChange={(e) => setStatus(e.target.value)}
+                value={"Actif"}
+              />
+              <label className="status">Actif</label>
+
+              <input
+                className="dot one"
+                type="radio"
+                name="status"
+                onChange={(e) => setStatus(e.target.value)}
+                value={"Inactif"}
+              />
+              <label className="status">Inactif</label>
+            </div>
+          </div>
+          <div className="button">
+            <input type="submit" value="Valider l'inscription" />
+          </div>
         </form>
       </div>
     </>
