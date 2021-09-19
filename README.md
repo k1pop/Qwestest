@@ -6,10 +6,10 @@
 
 Instalation server : `npm i`
 
-Instalation client : `cd ./client/` + `npm i`
+Instalation client : `cd client` + `npm i`
 
 ### Lancement projet :
 
 Start server : `npm start`
 
-Start client : `cd ./client/` + `npm start`
+Start client : `cd client` + `npm start`
