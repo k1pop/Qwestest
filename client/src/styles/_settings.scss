@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
-$font-1: "Poppins", sans-serif;
+$font-1: "Roboto", sans-serif;
 
 $color-1: #437fec;
 $color-2: #f7f7f7;
@@ -13,14 +13,8 @@ $color-4: #f6f1eb;
   padding: 0;
   font-family: $font-1;
 }
-body {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  // margin: 0.4rem auto;
-  // max-width: 1296px;
-  color: $color-3;
-  background-color: $color-2;
-  padding: 10px;
+
+.main-container {
+  text-align: center;
+  margin: 60px auto 0;
 }

@@ -3,8 +3,6 @@ import axios from "axios";
 
 const DeleteUsers = ({ id }) => {
   const handleDelete = () => {
-    // axios.delete(`/person/` + id);
-    //   window.location.reload();
     axios({
       method: "delete",
       url: `/person/` + id,
@@ -13,7 +11,6 @@ const DeleteUsers = ({ id }) => {
   };
 
   return (
-    // <div>&#10006;</div>;
     <button
       className="button-delete"
       onClick={() => {

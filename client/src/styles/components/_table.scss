@@ -1,24 +1,36 @@
-table {
-  border-spacing: 0px;
-  width: 100%;
-  background-color: $color-4;
+.content-table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 1.1em;
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
+  box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
 }
-
-.table td,
-.table th {
-  padding: 0.75em;
-  vertical-align: top;
-  text-align: center;
-  border-top: 1px solid $color-3;
-}
-
-.table tr:hover {
-  background-color: $color-1;
-  color: $color-2;
-}
-
-.table .thead th {
+.content-table .thead th {
   color: $color-2;
   background-color: $color-1;
   border-color: $color-3;
+  text-align: left;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddddd;
+  font-weight: 500;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid $color-1;
+}
+
+.content-table tr:hover {
+  color: $color-1;
+  font-weight: 600;
 }

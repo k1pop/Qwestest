@@ -1,9 +1,13 @@
 .container-form {
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 7px;
+  width: 400px;
+  margin: 60px auto 0;
+  user-select: none;
+  text-align: center;
+
+  border-radius: 50px;
+  padding: 30px;
+  -webkit-box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.144);
+  box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
 }
 
 .container-form .title {
@@ -70,13 +74,26 @@ form .status-details .status-all {
   width: 18;
 }
 
-form .button {
-  height: 45px;
-  margin: 45px 0;
+form .button input {
+  background-color: $color-1;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 50px 15px 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.144);
+  box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
 }
 
-form .button input {
-  height: 100%;
-  // margin: 100%;
-  outline: none;
+form .button input:hover {
+  animation: btn1 1s;
+}
+
+@keyframes btn1 {
+  50% {
+    transform: scale(1.2);
+  }
 }

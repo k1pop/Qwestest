@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Users from "../components/Users";
-import Navigation from "../components/Navigation";
 
 const Home = () => {
   //get data
@@ -47,8 +46,7 @@ const Home = () => {
   };
   return (
     <>
-      <Navigation />
-      <div>
+      <div className="main-container">
         <>
           {/* post data rapide */}
           <div>
@@ -97,7 +95,7 @@ const Home = () => {
 
         {/* get data */}
         <br />
-        <table className="table">
+        <table className="content-table">
           <thead className="thead">
             <tr>
               <th>Prénom</th>

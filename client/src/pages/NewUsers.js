@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navigation from "../components/Navigation";
 
 const NewUsers = () => {
   const [firstname, setFirstName] = useState("");
@@ -23,7 +22,6 @@ const NewUsers = () => {
 
   return (
     <>
-      <Navigation />
       <div className="container-form">
         <div className="title">Ajouter un utilisateur</div>
         <form onSubmit={handleRegister}>
@@ -82,6 +80,7 @@ const NewUsers = () => {
               <label className="status">Inactif</label>
             </div>
           </div>
+
           <div className="button">
             <input type="submit" value="Valider l'inscription" />
           </div>
