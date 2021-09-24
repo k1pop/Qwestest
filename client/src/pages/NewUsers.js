@@ -65,19 +65,25 @@ const NewUsers = () => {
                 className="dot one"
                 type="radio"
                 name="status"
+                id="actif"
                 onChange={(e) => setStatus(e.target.value)}
                 value={"Actif"}
               />
-              <label className="status">Actif</label>
+              <label for="actif" className="status">
+                Actif
+              </label>
 
               <input
                 className="dot one"
                 type="radio"
                 name="status"
+                id="inactif"
                 onChange={(e) => setStatus(e.target.value)}
                 value={"Inactif"}
               />
-              <label className="status">Inactif</label>
+              <label for="inactif" className="status">
+                Inactif
+              </label>
             </div>
           </div>
 

@@ -49,69 +49,78 @@ const Home = () => {
       <div className="main-container">
         <>
           {/* post data rapide */}
-          <div>
-            <h1>Ajout rapide</h1>
+          <div className="container-rapide">
+            <div className="title">Ajout rapide</div>
 
             <form onSubmit={(e) => handleSubmit(e)}>
-              <input
-                type="text"
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstname}
-                placeholder="Votre prénom..."
-              />
+              <div className="user-detailrapide">
+                <input
+                  type="text"
+                  onChange={(e) => setFirstName(e.target.value)}
+                  value={firstname}
+                  placeholder="Votre prénom..."
+                />
 
-              <input
-                type="text"
-                onChange={(e) => setLastName(e.target.value)}
-                value={lastname}
-                placeholder="Votre Nom..."
-              />
+                <input
+                  type="text"
+                  onChange={(e) => setLastName(e.target.value)}
+                  value={lastname}
+                  placeholder="Votre Nom..."
+                />
 
-              <input
-                type="text"
-                onChange={(e) => setAdress(e.target.value)}
-                value={adress}
-                placeholder="Votre Adresse mail..."
-              />
-              <input
-                type="radio"
-                name="status"
-                onChange={(e) => setStatus(e.target.value)}
-                value={"Actif"}
-              />
-              <label>Actif</label>
+                <input
+                  type="text"
+                  onChange={(e) => setAdress(e.target.value)}
+                  value={adress}
+                  placeholder="Votre Adresse mail..."
+                />
+                <input
+                  type="radio"
+                  name="status"
+                  id="actif"
+                  onChange={(e) => setStatus(e.target.value)}
+                  value={"Actif"}
+                />
+                <label for="actif">Actif</label>
 
-              <input
-                type="radio"
-                name="status"
-                onChange={(e) => setStatus(e.target.value)}
-                value={"Inactif"}
-              />
-              <label>Inactif</label>
-              <input type="submit" value="Valider l'inscription" />
+                <input
+                  type="radio"
+                  name="status"
+                  id="inactif"
+                  onChange={(e) => setStatus(e.target.value)}
+                  value={"Inactif"}
+                />
+                <label for="inactif">Inactif</label>
+              </div>
+              <div className="button-rapide">
+                <input type="submit" value="Valider l'inscription" />
+              </div>
             </form>
           </div>
         </>
+        <>{/* filtre */}</>
 
-        {/* get data */}
-        <br />
-        <table className="content-table">
-          <thead className="thead">
-            <tr>
-              <th>Prénom</th>
-              <th>Nom</th>
-              <th>adresse mail</th>
-              <th>status</th>
-              <th>&#9998; Modifier</th>
-              <th>&#10006; Supprimer</th>
-            </tr>
-          </thead>
-          <tbody>
-            {newsData.map((users) => (
-              <Users key={users._id} users={users} />
-            ))}
-          </tbody>
-        </table>
+        <>
+          {/* get data */}
+          <br />
+          <table className="content-table">
+            <thead className="thead">
+              <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>adresse mail</th>
+                <th>status</th>
+                <th>&#9998; Modifier</th>
+                <th>&#10006; Supprimer</th>
+              </tr>
+            </thead>
+            <tbody>
+              {newsData.map((users) => (
+                <Users key={users._id} users={users} />
+              ))}
+            </tbody>
+          </table>
+        </>
       </div>
     </>
   );

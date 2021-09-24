@@ -5,7 +5,14 @@ const Navigation = () => {
   return (
     <nav>
       <div className="nav-container">
-        <img className="logo" src="./img/Qwest_TV_Logo.png" alt="logo" />
+        <NavLink exact to="/">
+          <img
+            className="logo"
+            src="./img/Qwest_TV_Logo.png"
+            alt="logo"
+            to="/"
+          />
+        </NavLink>
 
         <ul className="nav-links">
           <li>

@@ -34,3 +34,34 @@
   color: $color-1;
   font-weight: 600;
 }
+
+.content-table tbody tr td input {
+  outline: none;
+
+  border: none;
+  color: $color-1;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 15px 5px 15px;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.144);
+  box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
+}
+
+.content-table tbody tr td button {
+  border: none;
+  color: $color-1;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 15px 5px 15px;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.144);
+  box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
+}
+
+.content-table tbody tr td button:hover {
+  background-color: $color-1;
+  color: $color-2;
+}
