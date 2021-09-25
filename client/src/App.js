@@ -9,7 +9,6 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/nouvelle-utilisateur" exact component={NewUsers} />

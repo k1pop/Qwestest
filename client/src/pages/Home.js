@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Users from "../components/Users";
+import Navigation from "../components/Navigation";
 
 const Home = () => {
   //get data
@@ -46,6 +47,7 @@ const Home = () => {
   };
   return (
     <>
+      <Navigation />
       <div className="main-container">
         <>
           {/* post data rapide */}
