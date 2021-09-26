@@ -43,7 +43,7 @@
   text-align: center;
   text-decoration: none;
   font-size: 1em;
-  padding: 5px 15px 5px 15px;
+  padding: 5px;
   border-radius: 50px;
   -webkit-box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.144);
   box-shadow: 1px 1px 11px 7px rgba(0, 0, 0, 0.144);
@@ -82,7 +82,7 @@
     }
 
     td {
-      padding-left: 150px;
+      padding-left: 130px;
       position: relative;
       border-bottom: 1px solid #dddddddd;
       margin-top: -1px;
@@ -96,8 +96,8 @@
       content: attr(data-label);
       position: absolute;
       top: 0;
-      left: 0;
-      width: 130px;
+      left: 5px;
+      width: 110px;
       bottom: 0;
       color: $color-2;
       background-color: $color-1;
