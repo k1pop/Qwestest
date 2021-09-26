@@ -76,23 +76,25 @@ const Home = () => {
                   value={adress}
                   placeholder="Votre Adresse Email..."
                 />
-                <input
-                  type="radio"
-                  name="status"
-                  id="actif"
-                  onChange={(e) => setStatus(e.target.value)}
-                  value={"Actif"}
-                />
-                <label for="actif">Actif</label>
+                <div>
+                  <input
+                    type="radio"
+                    name="status"
+                    id="actif"
+                    onChange={(e) => setStatus(e.target.value)}
+                    value={"Actif"}
+                  />
+                  <label for="actif">Actif</label>
 
-                <input
-                  type="radio"
-                  name="status"
-                  id="inactif"
-                  onChange={(e) => setStatus(e.target.value)}
-                  value={"Inactif"}
-                />
-                <label for="inactif">Inactif</label>
+                  <input
+                    type="radio"
+                    name="status"
+                    id="inactif"
+                    onChange={(e) => setStatus(e.target.value)}
+                    value={"Inactif"}
+                  />
+                  <label for="inactif">Inactif</label>
+                </div>
               </div>
               <div className="button-rapide">
                 <input type="submit" value="Valider l'inscription" />

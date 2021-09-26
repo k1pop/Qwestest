@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
-    <nav>
+    <nav className="navbar">
       <div className="nav-container">
-        <NavLink exact to="/">
+        <NavLink exact to="/" className="nav-logo">
           <img
             className="logo"
             src="./img/Qwest_TV_Logo.png"
@@ -14,22 +18,33 @@ const Navigation = () => {
           />
         </NavLink>
 
-        <ul className="nav-links">
-          <li>
-            <NavLink exact to="/" activeClassName="nav-active">
-              Accueil
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <NavLink
+              exact
+              to="/"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
+              Acceuil
             </NavLink>
           </li>
-          <li>
+          <li className="nav-item">
             <NavLink
               exact
               to="/nouvelle-utilisateur"
-              activeClassName="nav-active"
+              activeClassName="active"
+              className="nav-links"
+              onClick={handleClick}
             >
-              Ajouter un utilisateur
+              Nouvelle Utilisateur
             </NavLink>
           </li>
         </ul>
+        <div className="nav-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+        </div>
       </div>
     </nav>
   );
