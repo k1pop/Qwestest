@@ -28,7 +28,7 @@ const Users = ({ users }) => {
   return (
     <tr>
       {isEditing ? (
-        <td>
+        <td data-label="Prénom">
           <input
             onChange={(e) => setEditFirstname(e.target.value)}
             autoFocus
@@ -36,11 +36,13 @@ const Users = ({ users }) => {
           ></input>
         </td>
       ) : (
-        <td>{editedFirstname ? editedFirstname : users.firstname}</td>
+        <td data-label="Prénom">
+          {editedFirstname ? editedFirstname : users.firstname}
+        </td>
       )}
 
       {isEditing ? (
-        <td>
+        <td data-label="Nom">
           <input
             onChange={(e) => setEditLastname(e.target.value)}
             autoFocus
@@ -48,11 +50,13 @@ const Users = ({ users }) => {
           ></input>
         </td>
       ) : (
-        <td>{editedLastname ? editedLastname : users.lastname}</td>
+        <td data-label="Nom">
+          {editedLastname ? editedLastname : users.lastname}
+        </td>
       )}
 
       {isEditing ? (
-        <td>
+        <td data-label="Adresse Email">
           <input
             onChange={(e) => setEditAdress(e.target.value)}
             autoFocus
@@ -60,11 +64,13 @@ const Users = ({ users }) => {
           ></input>
         </td>
       ) : (
-        <td>{editedAdress ? editedAdress : users.adress}</td>
+        <td data-label="Adresse Email">
+          {editedAdress ? editedAdress : users.adress}
+        </td>
       )}
 
       {isEditing ? (
-        <td>
+        <td data-label="Status">
           <input
             type="radio"
             name="status"
@@ -82,20 +88,22 @@ const Users = ({ users }) => {
           <label>Inactif</label>
         </td>
       ) : (
-        <td>{editedStatus ? editedStatus : users.status}</td>
+        <td data-label="Status">
+          {editedStatus ? editedStatus : users.status}
+        </td>
       )}
 
       {isEditing ? (
-        <td>
+        <td data-label="Modifier">
           <button onClick={handleEdit}>&#10004;</button>
         </td>
       ) : (
-        <td>
+        <td data-label="Modifier">
           <button onClick={() => setIsEditing(true)}>&#9998;</button>
         </td>
       )}
 
-      <td>
+      <td data-label="Supprimer">
         <DeleteUsers id={users._id} />
       </td>
     </tr>

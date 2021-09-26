@@ -74,7 +74,7 @@ const Home = () => {
                   type="text"
                   onChange={(e) => setAdress(e.target.value)}
                   value={adress}
-                  placeholder="Votre Adresse mail..."
+                  placeholder="Votre Adresse Email..."
                 />
                 <input
                   type="radio"
@@ -110,8 +110,8 @@ const Home = () => {
               <tr>
                 <th>Prénom</th>
                 <th>Nom</th>
-                <th>adresse mail</th>
-                <th>status</th>
+                <th>Adresse Email</th>
+                <th>Status</th>
                 <th>&#9998; Modifier</th>
                 <th>&#10006; Supprimer</th>
               </tr>

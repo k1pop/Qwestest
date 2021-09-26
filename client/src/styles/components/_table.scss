@@ -65,3 +65,51 @@
   background-color: $color-1;
   color: $color-2;
 }
+
+@media only screen and (max-width: 950px) {
+  table,
+  .content-table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+  .content-table {
+    .thead {
+      display: none;
+    }
+
+    td {
+      padding-left: 150px;
+      position: relative;
+      border-bottom: 1px solid #dddddddd;
+      margin-top: -1px;
+    }
+    td:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    td::before {
+      padding: 10px;
+      content: attr(data-label);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130px;
+      bottom: 0;
+      color: $color-2;
+      background-color: $color-1;
+      border-color: $color-3;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    tbody tr {
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $color-1;
+    }
+  }
+}
